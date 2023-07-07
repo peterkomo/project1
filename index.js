@@ -15,5 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 for (let i = 0; i < strongArray.length; i++) 
 {
     let listItem = document.createElement("li"); // Create a new <li> element
-  
+  // Set the innerHTML of the <li> element to the 'title' property of the current array item
+  listItem.innerHTML = strongArray[i].title;
+
    })
