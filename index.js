@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
    })
    .then(function (data) {
      // Get the 'strong' array from the JSON data
-     //let strongArray = data;
+     let strongArray = data;
 
      // Get the <ul> element with id 'strong'
      //let strongList = document.getElementById("strong");
