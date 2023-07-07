@@ -59,4 +59,12 @@ document.getElementById("content").textContent = selectedObject.content;
 document.getElementById("description").textContent =
   selectedObject.description;
 // Update the 'textContent' of the element with id 'description' with the 'description' property of the selected object
+
+ // Update the image
+ let image = document.getElementById("image");// Get the element with the id 'image' and assign it to the 'image' variable
+ image.src = selectedObject.image;// Set the 'src' attribute of the 'image' element to the 'image' property of the selected object
+ image.alt = selectedObject.title;// Set the 'alt' attribute of the 'image' element to the 'title' property of the selected object
+}
+
+
 })
