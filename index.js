@@ -46,7 +46,9 @@ document.getElementById("bravesong").innerHTML =
   '<a href="' + selectedObject.bravesong + '">Brave Song</a>';
 // Update the 'innerHTML' of the element with id 'bravesong' with an anchor tag containing the 'bravesong' property of the selected object as the href attribute
 
-
+document.getElementById("dance").innerHTML =
+  '<a href="' + selectedObject.dance + '">Dance</a>';
+// Update the 'innerHTML' of the element with id 'dance' with an anchor tag containing the 'dance' property of the selected object as the href attribute
 
 
 })
