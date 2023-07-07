@@ -50,5 +50,7 @@ document.getElementById("dance").innerHTML =
   '<a href="' + selectedObject.dance + '">Dance</a>';
 // Update the 'innerHTML' of the element with id 'dance' with an anchor tag containing the 'dance' property of the selected object as the href attribute
 
+document.getElementById("todo").textContent = selectedObject.todo;
+// Update the 'textContent' of the element with id 'todo' with the 'todo' property of the selected object
 
 })
