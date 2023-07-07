@@ -42,6 +42,9 @@ let selectedObject = strongArray.find(function (obj) {
 document.getElementById("title").textContent = selectedObject.title;
 // Update the 'textContent' of the element with id 'title' with the 'title' property of the selected object
 
+document.getElementById("bravesong").innerHTML =
+  '<a href="' + selectedObject.bravesong + '">Brave Song</a>';
+// Update the 'innerHTML' of the element with id 'bravesong' with an anchor tag containing the 'bravesong' property of the selected object as the href attribute
 
 
 
