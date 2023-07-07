@@ -1,6 +1,6 @@
 
-header{
-    background-color: #677380;
+#dop{
+    background-color: #366598;
 }
 
 
@@ -10,13 +10,13 @@ body {
     padding: 0;
 }
 
-#head {
+#dop {
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #3763ae;
     padding: 20px;
 }
 
-#head p {
+#dop p {
     font-size: 20px;
     margin: 0;
 }
