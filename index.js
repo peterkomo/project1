@@ -53,4 +53,7 @@ document.getElementById("dance").innerHTML =
 document.getElementById("todo").textContent = selectedObject.todo;
 // Update the 'textContent' of the element with id 'todo' with the 'todo' property of the selected object
 
+document.getElementById("content").textContent = selectedObject.content;
+// Update the 'textContent' of the element with id 'content' with the 'content' property of the selected object
+
 })
