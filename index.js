@@ -11,5 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
      // Get the <ul> element with id 'strong'
       let strongList = document.getElementById("strong");
- 
+ // Loop through the 'strong' array and create <li> elements
+for (let i = 0; i < strongArray.length; i++) 
    })
