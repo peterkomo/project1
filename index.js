@@ -32,5 +32,5 @@ for (let i = 0; i < strongArray.length; i++)
 }
 function handleClick(event)//Function to handle click events on the <li> elements
 let clickedItem = event.target;// Get the element that was clicked
-
+let id = clickedItem.getAttribute("data-id"); // Get the value of the 'data-id' attribute
    })
