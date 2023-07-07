@@ -56,4 +56,7 @@ document.getElementById("todo").textContent = selectedObject.todo;
 document.getElementById("content").textContent = selectedObject.content;
 // Update the 'textContent' of the element with id 'content' with the 'content' property of the selected object
 
+document.getElementById("description").textContent =
+  selectedObject.description;
+// Update the 'textContent' of the element with id 'description' with the 'description' property of the selected object
 })
