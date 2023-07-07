@@ -18,4 +18,7 @@ for (let i = 0; i < strongArray.length; i++)
   // Set the innerHTML of the <li> element to the 'title' property of the current array item
   listItem.innerHTML = strongArray[i].title;
 
+  // Set the 'data-id' attribute of the <li> element to the 'id' property of the current array item
+  listItem.setAttribute("data-id", strongArray[i].id);
+
    })
