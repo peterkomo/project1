@@ -21,4 +21,7 @@ for (let i = 0; i < strongArray.length; i++)
   // Set the 'data-id' attribute of the <li> element to the 'id' property of the current array item
   listItem.setAttribute("data-id", strongArray[i].id);
 
+  // Set the 'data-image' attribute of the <li> element to the 'image' property of the current array item
+  listItem.setAttribute("data-image", strongArray[i].image);
+
    })
