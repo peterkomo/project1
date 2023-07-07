@@ -24,4 +24,7 @@ for (let i = 0; i < strongArray.length; i++)
   // Set the 'data-image' attribute of the <li> element to the 'image' property of the current array item
   listItem.setAttribute("data-image", strongArray[i].image);
 
+  // Add a click event listener to the <li> element, calling the 'handleClick' function
+  listItem.addEventListener("click", handleClick);
+
    })
