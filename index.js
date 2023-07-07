@@ -38,7 +38,10 @@ let id = clickedItem.getAttribute("data-id"); // Get the value of the 'data-id' 
 let selectedObject = strongArray.find(function (obj) {
     return obj.id === id;
   });
-  
+  // Update the content of the elements with the selected object's data
+document.getElementById("title").textContent = selectedObject.title;
+// Update the 'textContent' of the element with id 'title' with the 'title' property of the selected object
+
 
 
 
