@@ -30,6 +30,7 @@ for (let i = 0; i < strongArray.length; i++)
    // Append the <li> element as a child to the 'strongList' element
    strongList.appendChild(listItem);
 }
+function handleClick(event)
 
 
    })
