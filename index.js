@@ -27,4 +27,9 @@ for (let i = 0; i < strongArray.length; i++)
   // Add a click event listener to the <li> element, calling the 'handleClick' function
   listItem.addEventListener("click", handleClick);
 
+   // Append the <li> element as a child to the 'strongList' element
+   strongList.appendChild(listItem);
+}
+
+
    })
