@@ -13,4 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let strongList = document.getElementById("strong");
  // Loop through the 'strong' array and create <li> elements
 for (let i = 0; i < strongArray.length; i++) 
+{
+    let listItem = document.createElement("li"); // Create a new <li> element
+  
    })
