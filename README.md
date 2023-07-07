@@ -26,6 +26,9 @@ Link `git@github.com:peterkomo/project1.git`
 * Navigate to the project directory with the command `cd project1`
 
 * navigate to your prefered editor
+* 
+* on the terminal runn json-server --watch db.json and view
+
 
 
 
@@ -41,11 +44,9 @@ Go Back to the top
 * Backend: javascript
 
 # Reference
-* Materialize CSS
-* React Router
-* ViteJS
-* Tailwind
-* FastAPI
+* css
+* java script
+* html
 Go Back to the top
 
  # Licence
