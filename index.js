@@ -1,70 +1,57 @@
+// Execute the code when the DOM content has been loaded
 document.addEventListener("DOMContentLoaded", function () {
-   // Code to be executed when the DOM is fully loaded 
-   fetch("http://localhost:3000/strong")
-    .then(function (response) {// Extract the JSON data from the response
-     return response.json();
-   })
-   .then(function (data) {
-    // Handle the retrieved JSON data
-     // Get the 'strong' array from the JSON data
-     let strongArray = data;
 
-     // Get the <ul> element with id 'strong'
-      let strongList = document.getElementById("strong");
- // Loop through the 'strong' array and create <li> elements
-for (let i = 0; i < strongArray.length; i++) 
-{
-    let listItem = document.createElement("li"); // Create a new <li> element
-  // Set the innerHTML of the <li> element to the 'title' property of the current array item
-  listItem.innerHTML = strongArray[i].title;
-
-  // Set the 'data-id' attribute of the <li> element to the 'id' property of the current array item
-  listItem.setAttribute("data-id", strongArray[i].id);
-
-  // Set the 'data-image' attribute of the <li> element to the 'image' property of the current array item
-  listItem.setAttribute("data-image", strongArray[i].image);
-
-  // Add a click event listener to the <li> element, calling the 'handleClick' function
-  listItem.addEventListener("click", handleClick);
-
-   // Append the <li> element as a child to the 'strongList' element
-   strongList.appendChild(listItem);
-}
-function handleClick(event)//Function to handle click events on the <li> elements
-let clickedItem = event.target;// Get the element that was clicked
-let id = clickedItem.getAttribute("data-id"); // Get the value of the 'data-id' attribute
+    // Fetch data from JSON server
+    fetch("http://localhost:3000/strong")
+      .then(function (response) {
+        return response.json(); // Convert the response to JSON format
+      })
+      .then(function (data) {
+        // Get the 'strong' array from the JSON data
+        let strongArray = data;
   
-// Find the object in the 'strong' array with the matching id
-let selectedObject = strongArray.find(function (obj) {
-    return obj.id === id;
+        // Get the <ul> element with id 'strong'
+        let strongList = document.getElementById("strong");
+  
+        // Loop through the 'strong' array and create <li> elements
+        for (let i = 0; i < strongArray.length; i++) {
+          let listItem = document.createElement("li"); // Create a new <li> element
+          listItem.innerHTML = strongArray[i].title; // Set the innerHTML of the <li> to the 'title' property of the object
+          listItem.setAttribute("data-id", strongArray[i].id); // Set the 'data-id' attribute of the <li> to the 'id' property of the object
+          listItem.setAttribute("data-image", strongArray[i].image); // Set the 'data-image' attribute of the <li> to the 'image' property of the object
+          listItem.addEventListener("click", handleClick); // Add a click event listener to the <li> element
+          strongList.appendChild(listItem); // Append the <li> element to the <ul> element
+        }
+  
+        // Function to handle click events on the <li> elements
+        function handleClick(event) {
+          let clickedItem = event.target; // Get the clicked element
+          let id = clickedItem.getAttribute("data-id"); // Get the 'data-id' attribute value of the clicked element
+  
+          // Find the object in the 'strong' array with the matching id
+          let selectedObject = strongArray.find(function (obj) {
+            return obj.id === id;
+          });
+  
+          // Update the content of the elements with the selected object's data
+          document.getElementById("title").textContent = selectedObject.title; // Update the title element
+          document.getElementById("bravesong").innerHTML =
+            '<a href="' + selectedObject.bravesong + '">Brave Song</a>'; // Update the bravesong element with a link
+          document.getElementById("dance").innerHTML =
+            '<a href="' + selectedObject.dance + '">Dance</a>'; // Update the dance element with a link
+          document.getElementById("todo").textContent = selectedObject.todo; // Update the todo element
+          document.getElementById("content").textContent = selectedObject.content; // Update the content element
+          document.getElementById("description").textContent =
+            selectedObject.description; // Update the description element
+  
+          // Update the image
+          let image = document.getElementById("image");
+          image.src = selectedObject.image; // Update the src attribute of the image element with the 'image' property of the object
+          image.alt = selectedObject.title; // Update the alt attribute of the image element with the 'title' property of the object
+        }
+      })
+      .catch(function (error) {
+        console.log(error); // Log any errors that occur during the fetch request
+      });
   });
-  // Update the content of the elements with the selected object's data
-document.getElementById("title").textContent = selectedObject.title;
-// Update the 'textContent' of the element with id 'title' with the 'title' property of the selected object
-
-document.getElementById("bravesong").innerHTML =
-  '<a href="' + selectedObject.bravesong + '">Brave Song</a>';
-// Update the 'innerHTML' of the element with id 'bravesong' with an anchor tag containing the 'bravesong' property of the selected object as the href attribute
-
-document.getElementById("dance").innerHTML =
-  '<a href="' + selectedObject.dance + '">Dance</a>';
-// Update the 'innerHTML' of the element with id 'dance' with an anchor tag containing the 'dance' property of the selected object as the href attribute
-
-document.getElementById("todo").textContent = selectedObject.todo;
-// Update the 'textContent' of the element with id 'todo' with the 'todo' property of the selected object
-
-document.getElementById("content").textContent = selectedObject.content;
-// Update the 'textContent' of the element with id 'content' with the 'content' property of the selected object
-
-document.getElementById("description").textContent =
-  selectedObject.description;
-// Update the 'textContent' of the element with id 'description' with the 'description' property of the selected object
-
- // Update the image
- let image = document.getElementById("image");// Get the element with the id 'image' and assign it to the 'image' variable
- image.src = selectedObject.image;// Set the 'src' attribute of the 'image' element to the 'image' property of the selected object
- image.alt = selectedObject.title;// Set the 'alt' attribute of the 'image' element to the 'title' property of the selected object
-}
-
-
-})
+  
