@@ -30,7 +30,7 @@ for (let i = 0; i < strongArray.length; i++)
    // Append the <li> element as a child to the 'strongList' element
    strongList.appendChild(listItem);
 }
-function handleClick(event)
-
+function handleClick(event)//Function to handle click events on the <li> elements
+let clickedItem = event.target;// Get the element that was clicked
 
    })
