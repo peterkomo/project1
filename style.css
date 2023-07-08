@@ -29,7 +29,7 @@ body {
     text-align: center;
 }
 #hate {
-    background-image: url("depression-sad.gif");
+    background-image: url("images (1).jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -68,8 +68,8 @@ body {
 img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
-    height: auto;
+    max-width: 60%;
+    height: 50;
 }
 #toop{
     font-size: x-large;
