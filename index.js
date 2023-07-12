@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch data from JSON server
-    fetch("http://localhost:3000/strong")
+    fetch("https://api.npoint.io/7c8ddf8f8cca5e0a1787/strong")
       .then(function (response) {
         return response.json(); // Convert the response to JSON format
       })
